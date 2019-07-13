@@ -4,6 +4,9 @@ import {FormattedMessage} from 'react-intl';
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
 
+import webmidiIconURL from './webmidi/webmidi.png';
+import webmidiInsetIconURL from './webmidi/webmidi-small.png';
+
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
@@ -37,16 +40,28 @@ import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
 
 import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
-import boostConnectionIconURL from './boost/boost-illustration.svg';
-import boostConnectionSmallIconURL from './boost/boost-small.svg';
-import boostConnectionTipIconURL from './boost/boost-button-illustration.svg';
-
-import gdxforIconURL from './gdxfor/gdxfor.png';
-import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
-import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
-import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="WebMIDI"
+                description="Name for the 'WebMIDI' extension"
+                id="gui.extension.webmidi.name"
+            />
+        ),
+        extensionId: 'webmidi',
+        iconURL: webmidiIconURL,
+        insetIconURL: webmidiInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Web MIDI for Musical Instrument"
+                description="Description for the 'WebMIDI' extension"
+                id="gui.extension.webmidi.description"
+            />
+        ),
+        featured: true
+    },
     {
         name: (
             <FormattedMessage
@@ -227,37 +242,6 @@ export default [
         helpLink: 'https://scratch.mit.edu/ev3'
     },
     {
-        name: 'LEGO BOOST',
-        extensionId: 'boost',
-        collaborator: 'LEGO',
-        iconURL: boostIconURL,
-        insetIconURL: boostInsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Bring robotic creations to life."
-                description="Description for the 'LEGO BOOST' extension"
-                id="gui.extension.boost.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        bluetoothRequired: true,
-        internetConnectionRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: true,
-        connectionIconURL: boostConnectionIconURL,
-        connectionSmallIconURL: boostConnectionSmallIconURL,
-        connectionTipIconURL: boostConnectionTipIconURL,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their BOOST."
-                id="gui.extension.boost.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/boost'
-    },
-    {
         name: 'LEGO Education WeDo 2.0',
         extensionId: 'wedo2',
         collaborator: 'LEGO',
@@ -289,33 +273,21 @@ export default [
         helpLink: 'https://scratch.mit.edu/wedo'
     },
     {
-        name: 'Go Direct Force & Acceleration',
-        extensionId: 'gdxfor',
-        collaborator: 'Vernier',
-        iconURL: gdxforIconURL,
-        insetIconURL: gdxforInsetIconURL,
+        name: 'LEGO BOOST',
+        extensionId: 'boost',
+        collaborator: 'LEGO',
+        iconURL: boostIconURL,
+        insetIconURL: boostInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage="Sense push, pull, motion, and spin."
-                description="Description for the Vernier Go Direct Force and Acceleration sensor extension"
-                id="gui.extension.gdxfor.description"
+                defaultMessage="Bring robotic creations to life."
+                description="Description for the 'LEGO BOOST' extension"
+                id="gui.extension.boost.description"
             />
         ),
         featured: true,
-        disabled: false,
+        disabled: true,
         bluetoothRequired: true,
-        internetConnectionRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        connectionIconURL: gdxforConnectionIconURL,
-        connectionSmallIconURL: gdxforConnectionSmallIconURL,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their force and acceleration sensor."
-                id="gui.extension.gdxfor.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/vernier'
+        internetConnectionRequired: true
     }
 ];
