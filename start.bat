@@ -6,3 +6,4 @@ cd ..\scratch-gui
 npm i
 npm link scratch-vm
 npm start
+rem npm run build
