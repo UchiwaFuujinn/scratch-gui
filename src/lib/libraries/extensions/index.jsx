@@ -7,6 +7,9 @@ import musicInsetIconURL from './music/music-small.svg';
 import webmidiIconURL from './webmidi/webmidi.png';
 import webmidiInsetIconURL from './webmidi/webmidi-small.png';
 
+import gamepadIconURL from './gamepad/gamepadext.png';
+import gamepadInsetIconURL from './gamepad/gamepadextmin.png';
+
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
@@ -42,6 +45,26 @@ import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
 
 export default [
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="GamePad"
+                description="Name for the 'GamePad' extension"
+                id="gui.extension.gamepad.name"
+            />
+        ),
+        extensionId: 'gamepad',
+        iconURL: gamepadIconURL,
+        insetIconURL: gamepadInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="using GamePad"
+                description="Description for the 'GamePad' extension"
+                id="gui.extension.gamepad.description"
+            />
+        ),
+        featured: true
+    },
     {
         name: (
             <FormattedMessage
